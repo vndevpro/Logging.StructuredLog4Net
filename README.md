@@ -1,0 +1,1 @@
+# Logging.StructuredLog4Net
