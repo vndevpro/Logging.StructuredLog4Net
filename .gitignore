@@ -188,3 +188,6 @@ GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
 *.nupkg
+/NuGet.Logging.StructuredLog4Net/*.nupkg
+/NuGet.Logging.StructuredLog4Net/*.nupkg
+/NuGet.Logging.StructuredLog4Net/*.nupkg
