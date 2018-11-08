@@ -30,6 +30,7 @@ namespace Logging.StructuredLog4NetPOC
 
         private static void LogDebugWithObjectValue()
         {
+            Logger.Debug("It happens at {@TheDate:d} - {TheDate:t}", DateTime.Now);
             Logger.Debug("Ext Info 1", new { Number = 100 });
             Logger.Debug("Ext Info 2 {0}", new
             {
@@ -42,7 +43,6 @@ namespace Logging.StructuredLog4NetPOC
                 DateOfBirth = DateTime.Today,
                 Status = true
             });
-            Logger.Debug("Ext Info 4", null);
         }
 
         private static void LogDebugWithObjectValueAndException()
@@ -54,8 +54,7 @@ namespace Logging.StructuredLog4NetPOC
             }
             catch (Exception ex)
             {
-                Logger.Debug("Error on ABCD", new { X = 100, Y = 0 }, ex);
-                Logger.Debug("Error on ABCD", null, ex);
+                Logger.Debug(ex, "Error on ABCD {@X} - {@Y}", new { X = 100 }, new { Y = 0 });
             }
         }
 
@@ -73,7 +72,6 @@ namespace Logging.StructuredLog4NetPOC
                 DateOfBirth = DateTime.Today,
                 Status = true
             });
-            Logger.Info("Ext Info 4", null);
         }
 
         private static void LogInfoWithObjectValueAndException()
@@ -85,8 +83,7 @@ namespace Logging.StructuredLog4NetPOC
             }
             catch (Exception ex)
             {
-                Logger.Info("Error on ABCD", new { X = 100, Y = 0 }, ex);
-                Logger.Info("Error on ABCD", null, ex);
+                Logger.Info(ex, "Error on ABCD {@X} - {@Y}", new { X = 100 }, new { Y = 0 });
             }
         }
 
@@ -104,7 +101,6 @@ namespace Logging.StructuredLog4NetPOC
                 DateOfBirth = DateTime.Today,
                 Status = true
             });
-            Logger.Warn("Ext Info 4", null);
         }
 
         private static void LogWarnWithObjectValueAndException()
@@ -116,8 +112,7 @@ namespace Logging.StructuredLog4NetPOC
             }
             catch (Exception ex)
             {
-                Logger.Warn("Error on ABCD", new { X = 100, Y = 0 }, ex);
-                Logger.Warn("Error on ABCD", null, ex);
+                Logger.Warn(ex, "Error on ABCD {@X} - {@Y}", new { X = 100 }, new { Y = 0 });
             }
         }
 
@@ -135,7 +130,6 @@ namespace Logging.StructuredLog4NetPOC
                 DateOfBirth = DateTime.Today,
                 Status = true
             });
-            Logger.Error("Ext Info 4", null);
         }
 
         private static void LogErrorWithObjectValueAndException()
@@ -147,8 +141,7 @@ namespace Logging.StructuredLog4NetPOC
             }
             catch (Exception ex)
             {
-                Logger.Error("Error on ABCD", new { X = 100, Y = 0 }, ex);
-                Logger.Error("Error on ABCD", null, ex);
+                Logger.Error(ex, "Error on ABCD {@X} - {@Y}", new { X = 100 }, new { Y = 0 });
             }
         }
 
@@ -166,7 +159,6 @@ namespace Logging.StructuredLog4NetPOC
                 DateOfBirth = DateTime.Today,
                 Status = true
             });
-            Logger.Fatal("Ext Info 4", null);
         }
 
         private static void LogFatalWithObjectValueAndException()
@@ -178,8 +170,7 @@ namespace Logging.StructuredLog4NetPOC
             }
             catch (Exception ex)
             {
-                Logger.Fatal("Error on ABCD", new { X = 100, Y = 0 }, ex);
-                Logger.Fatal("Error on ABCD", null, ex);
+                Logger.Fatal(ex, "Error on ABCD {@X} - {@Y}", new { X = 100 }, new { Y = 0 });
             }
         }
     }

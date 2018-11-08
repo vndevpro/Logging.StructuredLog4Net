@@ -2,13 +2,13 @@
 <package >
   <metadata>
     <id>Logging.StructuredLog4Net</id>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <title>Logging.StructuredLog4Net</title>
     <authors>RabbitSoftware</authors>
     <owners>junioho</owners>
     <description>
-Logging.StructuredLog4Net provides extension methods to log entries including value/business object and/or stack trace of the exception.
-The object and exception are serialized by JsonConvert / SerializeObject method (from Newtonsoft.Json). Nothing on log4net configuration is required to change.
+Logging.StructuredLog4Net provides extension methods to log entries including value/business objects and/or stack trace of the exception.
+The objects and message template are serialized /formatted using MessageTemplates. Nothing on log4net configuration is required to change.
 Github source: https://github.com/vndevpro/Logging.StructuredLog4Net
     </description>
     <releaseNotes>
@@ -24,11 +24,11 @@ Github source: https://github.com/vndevpro/Logging.StructuredLog4Net
     <dependencies>
         <group targetFramework="net45">
           <dependency id="log4net" version="2.0.8" />
-          <dependency id="Newtonsoft.Json" version="10.0.3" />
+          <dependency id="MessageTemplates" version="1.0.0-rc-00275" />
         </group>
     </dependencies>
     <references></references>
-    <tags></tags>
+    <tags>Logging Structured Log4Net</tags>
   </metadata>
   <files>
     <file src="lib\" target="lib" />
